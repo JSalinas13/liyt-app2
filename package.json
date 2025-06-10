@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "package": "electron-forge package",
     "start": "concurrently \"vite\" \"npm:electron-start\"",
-    "electron-start": "electron .",
+    "electron-start": "wait-on http://localhost:5173 && electron .",
     "make": "electron-forge make"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "express": "^5.1.0",
     "heroicons": "^2.2.0",
     "leaflet": "^1.9.4",
+    "liyt-app2": "file:",
     "nedb": "^1.8.0",
     "nedb-promises": "^6.2.3",
     "react": "^19.1.0",
@@ -53,6 +54,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "wait-on": "^8.0.3"
   }
 }

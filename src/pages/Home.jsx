@@ -12,10 +12,10 @@ export default function Home() {
 
     return (
         <div className="h-screen w-screen">
-            <MapContainer center={position} zoom={15} style={{ height: '100%', width: '100%' }}>
+            <MapContainer center={position} zoom={15} minZoom={15} maxZoom={15} style={{ height: '100%', width: '100%' }}>
                 <TileLayer
-                    url="/tiles/{z}/{x}/{y}.png" // Tiles locales
-                    attribution=""
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution="© OpenStreetMap contributors"
                 />
                 <Marker position={position} />
                 <Polyline positions={line} color="red" />
